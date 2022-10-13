@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="alert-box">
+      <p>알림창임</p>
+      <button onclick="toggle('none', null)">닫기</button>
+    </div>
+
+    <button onclick="toggle('block', '아이디를 입력하세요')">버튼</button>
+    <button onclick="toggle('block', '비번입력하세요')">버튼2</button>
+  </body>
+  <script>
+    // function toggle() {
+    //   if ((document.querySelector(".alert-box").style.display = "none")) {
+    //     document.querySelector(".alert-box").style.display = "block";
+    //   } else {
+    //     document.querySelector(".alert-box").style.display = "none";
+    //   }
+    // }
+
+    function toggle(style, text) {
+      document.querySelector(".alert-box").style.display = style;
+      document.querySelector(".alert-box p").innerText = text;
+    }
+  </script>
+</html>
