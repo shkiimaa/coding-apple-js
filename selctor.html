@@ -10,8 +10,9 @@
   <body>
     <div class="alert-box">
       <p>알림창임</p>
-      <button id="close">닫기</button>
+      <button onclick="toggle('none', null)">닫기</button>
     </div>
+
     <button onclick="toggle('block', '아이디를 입력하세요')">버튼</button>
     <button onclick="toggle('block', '비번입력하세요')">버튼2</button>
   </body>
@@ -23,9 +24,6 @@
     //     document.querySelector(".alert-box").style.display = "none";
     //   }
     // }
-    document.getElementById("close").addEventListener("click", function () {
-      document.querySelector(".alert-box").style.display = "none";
-    });
 
     function toggle(style, text) {
       document.querySelector(".alert-box").style.display = style;
